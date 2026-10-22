@@ -26,3 +26,6 @@ pnpm-debug.log*
 # playwright
 test-results/
 playwright-report/
+
+# Deployed with the site (ignored by some global gitignores)
+!deploy/.htaccess

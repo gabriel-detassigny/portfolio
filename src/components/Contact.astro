@@ -1,0 +1,59 @@
+---
+import { profile } from '../data/profile';
+import { useTranslations, type Locale } from '../i18n/ui';
+import { cvPath } from '../lib/cv';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const otherLocale: Locale = locale === 'en' ? 'fr' : 'en';
+---
+
+<section class="section wrap" id="contact" aria-labelledby="contact-title">
+	<p class="prompt">
+		<b>$&gt;</b> mail contact
+	</p>
+	<h2 class="section-title" id="contact-title">
+		{t('contact.title')}
+	</h2>
+	<p class="text">{t('contact.text')}</p>
+	<p class="email">
+		<a href={`mailto:${profile.email}`}>{profile.email}</a>
+	</p>
+	<div class="btns">
+		<a class="btn btn-primary" href={`mailto:${profile.email}`}>
+			{t('contact.email')}
+		</a>
+		<a class="btn btn-ghost" href={cvPath(locale)}>
+			{t('contact.cv')}
+		</a>
+		<a class="btn btn-ghost" href={cvPath(otherLocale)} hreflang={otherLocale}>
+			{t('contact.cvOther')}
+		</a>
+	</div>
+</section>
+
+<style>
+	.text {
+		max-width: 40rem;
+		color: var(--muted);
+		margin: 0;
+	}
+	.email {
+		font: 700 clamp(1.4rem, 4vw, 2.2rem) var(--font-display);
+		margin: 1rem 0 1.5rem;
+		overflow-wrap: anywhere;
+	}
+	.email a {
+		color: var(--ink);
+		text-decoration-color: var(--accent);
+	}
+	.btns {
+		display: flex;
+		gap: 0.6rem;
+		flex-wrap: wrap;
+	}
+</style>

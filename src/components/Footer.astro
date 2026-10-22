@@ -1,0 +1,38 @@
+---
+import { profile } from '../data/profile';
+import { formatDate, useTranslations, type Locale } from '../i18n/ui';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+---
+
+<footer class="wrap">
+	<p>
+		© {new Date().getFullYear()} {profile.name}
+	</p>
+	<p>
+		<a href={profile.repo}>{t('footer.source')}</a>
+		<span aria-hidden="true">·</span>
+		{t('footer.built', { date: formatDate(locale, new Date()) })}
+	</p>
+</footer>
+
+<style>
+	footer {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 0.5rem 1.5rem;
+		padding-block: 2rem 2.5rem;
+		border-top: 1px solid var(--line);
+		font: 400 0.8rem var(--font-mono);
+		color: var(--muted);
+	}
+	p {
+		margin: 0;
+	}
+</style>

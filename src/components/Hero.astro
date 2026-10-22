@@ -1,0 +1,161 @@
+---
+import { profile } from '../data/profile';
+import { localizePath, useTranslations, yearsOfExperience, type Locale } from '../i18n/ui';
+import { cvPath } from '../lib/cv';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const years = yearsOfExperience(profile.careerStart);
+const home = localizePath(locale);
+const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(t('contact.subject'))}`;
+---
+
+<section class="wrap hero" aria-labelledby="hero-title">
+	<div>
+		<p class="prompt">
+			<b>$&gt;</b> whoami
+		</p>
+		<h1 id="hero-title">{profile.name}</h1>
+		<p class="role">{t('hero.role', { start: profile.careerStart })}</p>
+		<p class="pitch">{t('hero.pitch')}</p>
+		{profile.availableForFreelance && <p class="status">{t('hero.available')}</p>}
+	</div>
+
+	<div class="paths">
+		<div class="card path">
+			<p class="label">{t('hero.employers.label')}</p>
+			<h2>{t('hero.employers.title')}</h2>
+			<p>{t('hero.employers.text', { years })}</p>
+			<div class="btns">
+				<a class="btn btn-primary" href={cvPath(locale)}>
+					{t('hero.employers.cta')}
+				</a>
+				<a class="btn btn-ghost" href={`${home}#experience`}>
+					{t('hero.employers.secondary')}
+				</a>
+			</div>
+		</div>
+		<div class="card path">
+			<p class="label">{t('hero.clients.label')}</p>
+			<h2>{t('hero.clients.title')}</h2>
+			<p>{t('hero.clients.text')}</p>
+			<div class="btns">
+				<a class="btn btn-primary" href={mailto}>
+					{t('hero.clients.cta')}
+				</a>
+				<a class="btn btn-ghost" href={`${home}#services`}>
+					{t('hero.clients.secondary')}
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<ul class="profiles">
+		<li>
+			<a href={profile.links.github}>github</a>
+		</li>
+		<li>
+			<a href={profile.links.linkedin}>linkedin</a>
+		</li>
+		<li>
+			<a href={profile.links.wordpress}>wordpress.org</a>
+		</li>
+		<li>
+			<a href={profile.links.blog}>blog</a>
+		</li>
+	</ul>
+</section>
+
+<style>
+	.hero {
+		display: grid;
+		gap: 2.5rem;
+		padding-block: 3.5rem 3rem;
+	}
+	h1 {
+		font: 700 clamp(2.6rem, 6vw, 4.6rem) / 1.02 var(--font-display);
+		letter-spacing: -0.02em;
+		margin: 0.5rem 0 0;
+	}
+	.role {
+		font: 500 clamp(1.1rem, 2.2vw, 1.4rem) / 1.35 var(--font-display);
+		color: var(--muted);
+		margin: 0.9rem 0 0;
+	}
+	.pitch {
+		max-width: 38rem;
+		margin: 1.25rem 0 0;
+	}
+	.status {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		font: 500 0.8rem var(--font-mono);
+		color: var(--signal);
+		background: var(--signal-soft);
+		padding: 0.3rem 0.7rem;
+		border-radius: 999px;
+		margin: 1.5rem 0 0;
+	}
+	.status::before {
+		content: '';
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		background: var(--signal);
+	}
+	.paths {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
+		gap: 1rem;
+	}
+	.path {
+		display: grid;
+		gap: 0.6rem;
+		align-content: start;
+		padding: 1.25rem 1.4rem;
+	}
+	.path h2 {
+		font: 700 1.25rem/1.3 var(--font-display);
+		margin: 0;
+	}
+	.path p {
+		margin: 0;
+		color: var(--muted);
+		font-size: 0.95rem;
+	}
+	.path .label {
+		font: 500 0.75rem var(--font-mono);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--accent);
+	}
+	.btns {
+		display: flex;
+		gap: 0.6rem;
+		flex-wrap: wrap;
+		margin-top: 0.4rem;
+	}
+	.profiles {
+		display: flex;
+		gap: 0.5rem 1.25rem;
+		flex-wrap: wrap;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font: 400 0.85rem var(--font-mono);
+	}
+	.profiles a {
+		color: var(--muted);
+		text-decoration: none;
+		border-bottom: 1px solid var(--line);
+	}
+	.profiles a:hover {
+		color: var(--accent);
+		border-color: var(--accent);
+	}
+</style>

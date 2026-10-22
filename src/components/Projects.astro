@@ -1,0 +1,98 @@
+---
+import { useTranslations, type Locale } from '../i18n/ui';
+import { getProjectRepoStats, getProjects, projectPath } from '../lib/projects';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const projects = (await getProjects(locale)).filter((project) => project.data.featured);
+const stats = await getProjectRepoStats();
+---
+
+<section class="section wrap" id="projects" aria-labelledby="projects-title">
+	<p class="prompt">
+		<b>$&gt;</b> ls ~/projects
+	</p>
+	<h2 class="section-title" id="projects-title">
+		{t('projects.title')}
+	</h2>
+	<ul class="grid">
+		{projects.map((project) => {
+			const repo = project.data.repo ? stats[project.data.repo] : undefined;
+			return (
+				<li class="card project">
+					<p class="kind">{project.data.kind}</p>
+					<h3>
+						<a href={projectPath(locale, project)}>{project.data.title}</a>
+					</h3>
+					<p class="summary">{project.data.summary}</p>
+					<ul class="tags">
+						{project.data.tags.slice(0, 4).map((tag) => (
+							<li class="tag">{tag}</li>
+						))}
+					</ul>
+					<p class="foot">
+						<a href={projectPath(locale, project)}>{t('projects.details')}</a>
+						{project.data.repo && <a href={`https://github.com/${project.data.repo}`}>{t('projects.repo')}</a>}
+						{repo && repo.stars > 0 && <span>★ {t('projects.stars', { count: repo.stars })}</span>}
+					</p>
+				</li>
+			);
+		})}
+	</ul>
+</section>
+
+<style>
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(19rem, 100%), 1fr));
+		gap: 1rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.project {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		position: relative;
+	}
+	.project:has(h3 a:hover) {
+		border-color: var(--accent);
+	}
+	.kind {
+		font: 500 0.72rem var(--font-mono);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--muted);
+		margin: 0;
+	}
+	h3 {
+		font: 700 1.2rem/1.3 var(--font-display);
+		margin: 0;
+	}
+	h3 a {
+		color: var(--ink);
+		text-decoration: none;
+	}
+	h3 a:hover {
+		color: var(--accent);
+	}
+	.summary {
+		margin: 0;
+		color: var(--muted);
+		font-size: 0.93rem;
+		flex: 1;
+	}
+	.foot {
+		display: flex;
+		gap: 0.5rem 1rem;
+		flex-wrap: wrap;
+		margin: 0.25rem 0 0;
+		font: 400 0.8rem var(--font-mono);
+		color: var(--muted);
+	}
+</style>

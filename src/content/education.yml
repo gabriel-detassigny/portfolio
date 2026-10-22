@@ -1,0 +1,17 @@
+- id: etna
+  school: ETNA
+  degree:
+    en: Master's degree in Software Engineering
+    fr: Master en ingénierie logicielle
+  start: 2012
+  end: 2014
+  location: Ivry-sur-Seine, France
+
+- id: epitech
+  school: Epitech
+  degree:
+    en: Bachelor's degree in Software Engineering
+    fr: Bachelor en ingénierie logicielle
+  start: 2009
+  end: 2012
+  location: Le Kremlin-Bicêtre, France

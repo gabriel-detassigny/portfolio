@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import { useTranslations } from '../i18n/ui';
+
+const t = useTranslations('en');
+---
+
+<Base locale="en" title={`${t('404.title')} · detassigny.net`} description={t('404.title')} translated={false}>
+	<section class="wrap notfound">
+		<p class="prompt">
+			<b>$&gt;</b> cd {Astro.url.pathname}
+		</p>
+		<p class="error">bash: cd: No such file or directory</p>
+		<h1>{t('404.title')}</h1>
+		<p>
+			{t('404.text')} <a href="https://blog.detassigny.net/">blog.detassigny.net</a>.
+		</p>
+		<p>
+			<a href="/">{t('404.home')}</a>
+		</p>
+	</section>
+</Base>
+
+<style>
+	.notfound {
+		padding-block: 4rem 6rem;
+	}
+	.error {
+		font: 400 0.9rem var(--font-mono);
+		color: var(--signal);
+		margin: 0.25rem 0 0;
+	}
+	h1 {
+		font: 700 clamp(2.2rem, 5vw, 3.4rem) / 1.05 var(--font-display);
+		margin: 1.5rem 0 1rem;
+	}
+</style>

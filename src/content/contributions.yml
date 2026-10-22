@@ -1,0 +1,38 @@
+# Open source contributions, most recent first.
+# Plugins published on wordpress.org are fetched at build time (src/lib/wporg.ts), so they are not listed here.
+
+- id: core-55677
+  kind: core
+  project: WordPress core
+  title:
+    en: 'REST API: avoid a duplicated query in post collections'
+    fr: 'API REST : éviter une requête dupliquée dans les collections de posts'
+  description:
+    en: Fixed an extra database query when the REST API returns an empty post collection. Credited in changeset 53498.
+    fr: Correction d'une requête SQL en trop lorsque l'API REST renvoie une collection de posts vide. Crédité dans le changeset 53498.
+  url: https://core.trac.wordpress.org/changeset/53498
+  date: 2022-05
+
+- id: performance-170
+  kind: pull-request
+  project: WordPress/performance
+  title:
+    en: Performance budget calculator
+    fr: Calculateur de budget de performance
+  description:
+    en: Proposed a tool in the WordPress Performance Lab plugin that generates a budget.json file for Lighthouse.
+    fr: Proposition d'un outil pour le plugin Performance Lab de WordPress, qui génère un fichier budget.json pour Lighthouse.
+  url: https://github.com/WordPress/performance/pull/170
+  date: 2022-02
+
+- id: simple-container
+  kind: package
+  project: Packagist
+  title:
+    en: simple-container
+    fr: simple-container
+  description:
+    en: A small PHP package implementing the PSR-11 container interface.
+    fr: Un petit package PHP qui implémente l'interface de conteneur PSR-11.
+  url: https://github.com/gabriel-detassigny/simple-container
+  date: 2021-03

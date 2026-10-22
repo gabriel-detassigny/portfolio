@@ -1,0 +1,80 @@
+[
+	{
+		"title": "Zensical Migration",
+		"url": "https://blog.detassigny.net/zensical-migration/",
+		"date": "2026-10-12T00:00:00+00:00",
+		"summary": "This blog was migrated to Zensical... and boy did Claude made this easy!"
+	},
+	{
+		"title": "Safe Refactoring: split a class into smaller ones",
+		"url": "https://blog.detassigny.net/safe-refactoring-split-a-class-into-smaller-ones/",
+		"date": "2021-06-25T08:35:07+00:00",
+		"summary": "A step-by-step guide on how to refactor big chunks of code using unit tests"
+	},
+	{
+		"title": "Design Pattern #3: Decorator Pattern",
+		"url": "https://blog.detassigny.net/design-pattern-3-decorator-pattern/",
+		"date": "2021-04-03T13:48:36+00:00",
+		"summary": "A pattern with a similar purpose to inheritance, but with some advantages!"
+	},
+	{
+		"title": "Mocking in PHP #4: Phake",
+		"url": "https://blog.detassigny.net/mocking-in-php-4-phake/",
+		"date": "2020-10-22T19:56:44+00:00",
+		"summary": "A simple to use and yet powerful mocking library"
+	},
+	{
+		"title": "Mocking in PHP #3: Mockery",
+		"url": "https://blog.detassigny.net/mocking-in-php-3-mockery/",
+		"date": "2020-10-14T19:19:55+00:00",
+		"summary": "How to use one of PHP's most popular mocking library"
+	},
+	{
+		"title": "Mocking in PHP #2: PHPUnit mocks",
+		"url": "https://blog.detassigny.net/mocking-in-php-2-phpunit-mocks/",
+		"date": "2019-05-07T20:37:59+00:00",
+		"summary": "How to use PHPUnit built-in mocking system"
+	},
+	{
+		"title": "Mocking in PHP #1: Writing your own mocks",
+		"url": "https://blog.detassigny.net/mocking-in-php-1-writing-your-own-mocks/",
+		"date": "2019-03-02T11:54:09+00:00",
+		"summary": "A good way to vizualize how mocking works in the first place is to implement your own mocks"
+	},
+	{
+		"title": "You need to write tests",
+		"url": "https://blog.detassigny.net/you-need-to-write-tests/",
+		"date": "2019-01-10T22:59:33+00:00",
+		"summary": "Writing unit tests at work should be one of your top priority!"
+	},
+	{
+		"title": "I gave up on Android",
+		"url": "https://blog.detassigny.net/i-gave-up-on-android/",
+		"date": "2018-12-24T14:46:33+00:00",
+		"summary": "I had been using Google's mobile OS for a while, but now it's time to say goodbye..."
+	},
+	{
+		"title": "Design Pattern #2: Dependency Injection",
+		"url": "https://blog.detassigny.net/design-pattern-2-dependency-injection/",
+		"date": "2018-12-06T06:32:07+00:00",
+		"summary": "A very useful pattern to keep your application clean and enable unit testing"
+	},
+	{
+		"title": "Managing my passwords with KeePass and OwnCloud",
+		"url": "https://blog.detassigny.net/managing-my-passwords-with-keepass-and-owncloud/",
+		"date": "2018-12-03T09:06:19+00:00",
+		"summary": "I had been trying to find the perfect setup for managing my passwords for a while, and I think I'm getting close."
+	},
+	{
+		"title": "Going Frameworkless",
+		"url": "https://blog.detassigny.net/going-frameworkless/",
+		"date": "2018-12-02T00:00:00+00:00",
+		"summary": "Why I think everyone should try web developing without a framework"
+	},
+	{
+		"title": "Design Pattern #1: Value Object",
+		"url": "https://blog.detassigny.net/design-pattern-1-value-object/",
+		"date": "2018-11-29T00:00:00+00:00",
+		"summary": "Learn how and why to use this simple yet very effective design pattern!"
+	}
+]

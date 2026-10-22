@@ -1,0 +1,50 @@
+# Freelance services, in display order.
+# `proof` is the id of a project (src/content/projects/<locale>/<id>.md) that shows this service in practice.
+
+- id: wordpress-development
+  order: 1
+  title:
+    en: WordPress plugins & themes
+    fr: Plugins et thèmes WordPress
+  description:
+    en: Custom blocks, block themes and plugins built to WordPress coding standards, with automated tests and CI.
+    fr: Blocs, thèmes et plugins sur mesure, conformes aux standards de code WordPress, avec tests automatisés et CI.
+  proof: eutopia-theme
+
+- id: migrations
+  order: 2
+  title:
+    en: Migrations & upgrades
+    fr: Migrations et mises à jour
+  description:
+    en: Moving old WordPress or PHP sites to current versions without losing content or search ranking, rehearsed on a copy first.
+    fr: Mise à jour de vieux sites WordPress ou PHP vers les versions actuelles, sans perte de contenu ni de référencement, avec une répétition sur une copie au préalable.
+  proof: psychopenhars
+
+- id: backend
+  order: 3
+  title:
+    en: PHP & Symfony backends
+    fr: Backends PHP et Symfony
+  description:
+    en: REST APIs, integrations and command-line tools with Symfony, API Platform or plain PHP.
+    fr: API REST, intégrations et outils en ligne de commande avec Symfony, API Platform ou PHP natif.
+  proof: payg-utility-calculator
+
+- id: performance
+  order: 4
+  title:
+    en: Performance & code audits
+    fr: Audits de performance et de code
+  description:
+    en: Core Web Vitals, slow queries and code-quality reviews, delivered as a prioritized list of fixes.
+    fr: Core Web Vitals, requêtes lentes et revue de la qualité du code, sous forme de liste de corrections priorisées.
+
+- id: maintenance
+  order: 5
+  title:
+    en: Maintenance
+    fr: Maintenance
+  description:
+    en: Ongoing updates, monitoring and small improvements for sites that need to keep running.
+    fr: Mises à jour, surveillance et petites améliorations continues pour les sites qui doivent rester en ligne.

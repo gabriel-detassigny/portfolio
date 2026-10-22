@@ -1,0 +1,231 @@
+---
+import '@fontsource-variable/bricolage-grotesque';
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import { getCollection } from 'astro:content';
+import { profile, skills } from '../data/profile';
+import { formatMonth, useTranslations, type Locale } from '../i18n/ui';
+
+interface Props {
+	locale: Locale;
+}
+
+// A print-only page: scripts/render-assets.mjs turns it into the downloadable PDF.
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const roles = (await getCollection('experience')).sort((a, b) => b.data.start.localeCompare(a.data.start));
+const education = (await getCollection('education')).sort((a, b) => b.data.end - a.data.end);
+const host = (url: string) => url.replace(/^https:\/\/(www\.)?/, '').replace(/\/$/, '');
+---
+
+<!doctype html>
+<html lang={locale}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex" />
+		<title>{profile.name} · {t('cv.title')}</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<h1>{profile.name}</h1>
+				<p class="role">Senior Staff Engineer · PHP, Symfony & WordPress</p>
+			</div>
+			<ul class="contact">
+				<li>{profile.email}</li>
+				<li>{profile.location[locale]}</li>
+				<li>detassigny.net</li>
+				<li>{host(profile.links.github)}</li>
+				<li>{host(profile.links.linkedin)}</li>
+			</ul>
+		</header>
+
+		<section>
+			<h2>{t('cv.profile')}</h2>
+			<p>{t('cv.profileText')}</p>
+		</section>
+
+		<section>
+			<h2>{t('cv.experience')}</h2>
+			{roles.map((role) => (
+				<article>
+					<div class="line">
+						<h3>
+							{role.data.role[locale]} · {role.data.company}
+						</h3>
+						<span class="dates">
+							{formatMonth(locale, role.data.start)} –{' '}
+							{role.data.end ? formatMonth(locale, role.data.end) : t('experience.present')}
+						</span>
+					</div>
+					<p class="where">
+						{role.data.location[locale]} · {role.data.stack.join(', ')}
+					</p>
+					<ul>
+						{role.data.highlights[locale].map((highlight) => (
+							<li>{highlight}</li>
+						))}
+					</ul>
+				</article>
+			))}
+		</section>
+
+		<div class="split">
+			<section>
+				<h2>{t('cv.skills')}</h2>
+				<dl>
+					{skills.map((skill) => (
+						<>
+							<dt>{skill.group[locale]}</dt>
+							<dd>{skill.items.join(', ')}</dd>
+						</>
+					))}
+					<dt>{t('skills.languages')}</dt>
+					<dd>{profile.languages.map((language) => language[locale]).join(', ')}</dd>
+				</dl>
+			</section>
+			<section>
+				<h2>{t('experience.education')}</h2>
+				{education.map((entry) => (
+					<p class="edu">
+						<strong>{entry.data.degree[locale]}</strong>
+						<br />
+						{entry.data.school}, {entry.data.location} · {entry.data.start}–{entry.data.end}
+					</p>
+				))}
+				<h2>{t('cv.interests')}</h2>
+				<p>{t('cv.interestsText')}</p>
+			</section>
+		</div>
+	</body>
+</html>
+
+<style is:global>
+	@page {
+		size: A4;
+		margin: 14mm 15mm;
+	}
+	:root {
+		--ink: #161a33;
+		--muted: #555b7a;
+		--accent: #4c4fc0;
+		--line: #dcdfec;
+		color-scheme: light;
+	}
+	body {
+		margin: 0 auto;
+		max-width: 180mm;
+		padding: 16px;
+		background: #ffffff;
+		color: var(--ink);
+		font:
+			400 9.5pt/1.45 'IBM Plex Sans',
+			system-ui,
+			sans-serif;
+	}
+	@media print {
+		body {
+			padding: 0;
+		}
+	}
+	header {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		border-bottom: 2px solid var(--accent);
+		padding-bottom: 8pt;
+		margin-bottom: 4pt;
+	}
+	h1 {
+		font:
+			700 24pt/1.05 'Bricolage Grotesque Variable',
+			system-ui,
+			sans-serif;
+		margin: 0;
+	}
+	.role {
+		margin: 4pt 0 0;
+		color: var(--muted);
+		font-size: 11pt;
+	}
+	.contact {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: right;
+		font:
+			400 8pt/1.5 'IBM Plex Mono',
+			monospace;
+		color: var(--muted);
+	}
+	h2 {
+		font:
+			600 8pt 'IBM Plex Mono',
+			monospace;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: var(--accent);
+		margin: 12pt 0 4pt;
+	}
+	p {
+		margin: 0 0 4pt;
+	}
+	article {
+		break-inside: avoid;
+		margin-bottom: 7pt;
+	}
+	.line {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		align-items: baseline;
+	}
+	h3 {
+		font:
+			600 10pt 'IBM Plex Sans',
+			sans-serif;
+		margin: 0;
+	}
+	.dates,
+	.where {
+		font:
+			400 8pt 'IBM Plex Mono',
+			monospace;
+		color: var(--muted);
+		white-space: nowrap;
+	}
+	.where {
+		white-space: normal;
+		margin: 1pt 0 2pt;
+	}
+	ul {
+		margin: 0;
+		padding-left: 12pt;
+	}
+	li {
+		margin-bottom: 1pt;
+	}
+	.split {
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		gap: 16pt;
+		break-inside: avoid;
+	}
+	dl {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 2pt 8pt;
+		margin: 0;
+	}
+	dt {
+		font-weight: 600;
+	}
+	dd {
+		margin: 0;
+	}
+	.edu {
+		margin-bottom: 6pt;
+	}
+</style>

@@ -1,0 +1,85 @@
+---
+import '@fontsource-variable/bricolage-grotesque';
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/500.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { profile } from '../data/profile';
+import { alternatePath, type Locale } from '../i18n/ui';
+
+interface Props {
+	locale: Locale;
+	title: string;
+	description: string;
+	/** Whether the page has a French and an English version. */
+	translated?: boolean;
+}
+
+const { locale, title, description, translated = true } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL('/og.png', Astro.site);
+
+const person = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: profile.name,
+	url: Astro.site?.toString(),
+	email: `mailto:${profile.email}`,
+	jobTitle: 'Senior Staff Engineer',
+	worksFor: { '@type': 'Organization', name: 'XWP', url: 'https://xwp.co/' },
+	address: { '@type': 'PostalAddress', addressLocality: 'Poitiers', addressCountry: 'FR' },
+	knowsAbout: ['PHP', 'Symfony', 'WordPress', 'React', 'TypeScript', 'Web performance'],
+	sameAs: Object.values(profile.links),
+};
+---
+
+<!doctype html>
+<html lang={locale}>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		{translated && (
+			<>
+				<link rel="alternate" hreflang="en" href={new URL(alternatePath(Astro.url.pathname, 'en'), Astro.site)} />
+				<link rel="alternate" hreflang="fr" href={new URL(alternatePath(Astro.url.pathname, 'fr'), Astro.site)} />
+				<link
+					rel="alternate"
+					hreflang="x-default"
+					href={new URL(alternatePath(Astro.url.pathname, 'en'), Astro.site)}
+				/>
+			</>
+		)}
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="theme-color" content="#f5f6fa" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#0f1222" media="(prefers-color-scheme: dark)" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:locale" content={locale === 'fr' ? 'fr_FR' : 'en_GB'} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="generator" content={Astro.generator} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify(person)} />
+		<script is:inline>
+			try {
+				const theme = localStorage.getItem('theme');
+				if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+			} catch {}
+		</script>
+	</head>
+	<body>
+		<Nav locale={locale} translated={translated} />
+		<main id="main">
+			<slot />
+		</main>
+		<Footer locale={locale} />
+	</body>
+</html>

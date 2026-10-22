@@ -1,0 +1,36 @@
+{
+	"name": "portfolio",
+	"type": "module",
+	"version": "0.0.1",
+	"engines": {
+		"node": ">=22.23.4"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build && node scripts/render-assets.mjs",
+		"preview": "astro preview",
+		"astro": "astro",
+		"check": "astro check",
+		"test": "vitest run tests/unit",
+		"test:e2e": "playwright test",
+		"render": "node scripts/render-assets.mjs",
+		"format": "prettier --write .",
+		"lint": "prettier --check ."
+	},
+	"dependencies": {
+		"@astrojs/sitemap": "3.7.4",
+		"@fontsource-variable/bricolage-grotesque": "5.3.0",
+		"@fontsource/ibm-plex-mono": "5.3.0",
+		"@fontsource/ibm-plex-sans": "5.3.0",
+		"astro": "7.4.2"
+	},
+	"devDependencies": {
+		"@astrojs/check": "0.9.12",
+		"@axe-core/playwright": "4.14.0",
+		"@playwright/test": "1.64.1",
+		"prettier": "3.9.10",
+		"prettier-plugin-astro": "1.1.1",
+		"typescript": "5.9.3",
+		"vitest": "5.0.5"
+	}
+}

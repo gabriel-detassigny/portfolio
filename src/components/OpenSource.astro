@@ -1,0 +1,119 @@
+---
+import { getCollection } from 'astro:content';
+import { formatMonth, useTranslations, type Locale } from '../i18n/ui';
+import { getPlugins, installsToShow } from '../lib/wporg';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const plugins = await getPlugins();
+const contributions = (await getCollection('contributions')).sort((a, b) => b.data.date.localeCompare(a.data.date));
+const numbers = new Intl.NumberFormat(locale);
+---
+
+<section class="section wrap" id="open-source" aria-labelledby="open-source-title">
+	<p class="prompt">
+		<b>$&gt;</b> git log --author=gdetassigny --all-repos
+	</p>
+	<h2 class="section-title" id="open-source-title">
+		{t('openSource.title')}
+	</h2>
+
+	<div class="columns">
+		{plugins.length > 0 && (
+			<div>
+				<h3 class="sub">{t('openSource.plugins')}</h3>
+				<ul class="list">
+					{plugins.map((plugin) => {
+						const installs = installsToShow(plugin.activeInstalls);
+						return (
+							<li class="card">
+								<a class="name" href={plugin.url}>
+									{plugin.name}
+								</a>
+								<p class="facts">
+									<span>{t('openSource.version', { version: plugin.version })}</span>
+									<span>{t('openSource.tested', { version: plugin.tested })}</span>
+									{installs !== null && <span>{t('openSource.installs', { count: numbers.format(installs) })}</span>}
+								</p>
+							</li>
+						);
+					})}
+				</ul>
+			</div>
+		)}
+		<div>
+			<h3 class="sub">{t('openSource.contributions')}</h3>
+			<ul class="list">
+				{contributions.map((item) => (
+					<li class="card">
+						<p class="facts">
+							<span>{item.data.project}</span>
+							<span>{formatMonth(locale, item.data.date)}</span>
+						</p>
+						<a class="name" href={item.data.url}>
+							{item.data.title[locale]}
+						</a>
+						<p class="description">{item.data.description[locale]}</p>
+					</li>
+				))}
+			</ul>
+		</div>
+	</div>
+</section>
+
+<style>
+	.columns {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+		gap: 2rem;
+	}
+	@media (max-width: 760px) {
+		.columns {
+			grid-template-columns: minmax(0, 1fr);
+		}
+	}
+	.sub {
+		font: 500 0.75rem var(--font-mono);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--muted);
+		margin: 0 0 0.75rem;
+	}
+	.list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		gap: 0.75rem;
+	}
+	.list .card {
+		display: grid;
+		gap: 0.35rem;
+		padding: 1rem 1.1rem;
+	}
+	.name {
+		font: 700 1.05rem/1.35 var(--font-display);
+		color: var(--ink);
+		text-decoration: none;
+	}
+	.name:hover {
+		color: var(--accent);
+	}
+	.facts {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem 0.9rem;
+		margin: 0;
+		font: 400 0.78rem var(--font-mono);
+		color: var(--muted);
+	}
+	.description {
+		margin: 0;
+		color: var(--muted);
+		font-size: 0.93rem;
+	}
+</style>

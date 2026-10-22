@@ -1,0 +1,134 @@
+# Professional experience, most recent first.
+# `ref` is shown like a git branch label next to the dates.
+# `filters` drives the technology filter on the timeline (see FILTERS in src/content.config.ts).
+
+- id: xwp
+  company: XWP
+  companyUrl: https://xwp.co/
+  role:
+    en: Senior Staff Engineer & Product Owner
+    fr: Senior Staff Engineer & Product Owner
+  start: 2021-09
+  end: null
+  location:
+    en: Remote
+    fr: Télétravail
+  ref: HEAD -> remote
+  highlights:
+    en:
+      - Builds modern WordPress plugins and themes for large publishers (Evolve Media, Are Media) and tech companies (Twitch), with Gutenberg, React, PHP 8, Sass and TypeScript.
+      - Improves web performance and Core Web Vitals on high-traffic sites.
+      - Acts as product owner, writing user stories and managing and prioritizing the backlog.
+      - Works with internal and client stakeholders across several projects at once, in Scrum and Kanban teams.
+      - Uses AI-assisted development workflows day to day.
+    fr:
+      - Développement de plugins et thèmes WordPress modernes pour de grands éditeurs (Evolve Media, Are Media) et des entreprises tech (Twitch), avec Gutenberg, React, PHP 8, Sass et TypeScript.
+      - Optimisation des performances web et des Core Web Vitals sur des sites à fort trafic.
+      - 'Rôle de product owner : rédaction des user stories, gestion et priorisation du backlog.'
+      - Communication avec les parties prenantes internes et clientes sur plusieurs projets en parallèle, en Scrum et Kanban.
+      - Développement assisté par l'IA au quotidien.
+  stack: [WordPress, Gutenberg, PHP 8, React, TypeScript, Sass]
+  filters: [wordpress, php, javascript]
+
+- id: immediate-media
+  company: Immediate Media
+  companyUrl: https://www.immediate.co.uk/
+  role:
+    en: Senior Backend PHP Developer
+    fr: Développeur backend PHP senior
+  start: 2019-01
+  end: 2021-08
+  location:
+    en: London, UK
+    fr: Londres, Royaume-Uni
+  ref: london
+  highlights:
+    en:
+      - Migrated sites to headless WordPress and a service-oriented architecture.
+      - Built REST APIs with PHP 7.4, API Platform (Symfony), MongoDB and Docker.
+      - Developed AWS Lambda functions with Bref for Amazon Alexa.
+      - Set up automated testing at every level, from unit and API tests to load and end-to-end tests.
+      - Contributed to the JavaScript side with Node.js and React.
+      - Mentored and coached mid-level developers.
+    fr:
+      - Migration de sites vers WordPress headless et une architecture orientée services.
+      - Développement d'API REST avec PHP 7.4, API Platform (Symfony), MongoDB et Docker.
+      - Développement de fonctions AWS Lambda avec Bref pour Amazon Alexa.
+      - 'Tests automatisés à tous les niveaux : unitaires, API, charge et end-to-end.'
+      - Contributions côté JavaScript avec Node.js et React.
+      - Mentorat de développeurs de niveau intermédiaire.
+  stack: [PHP 7.4, API Platform, Symfony, MongoDB, Docker, AWS Lambda, Node.js, React]
+  filters: [php, symfony, wordpress, javascript]
+
+- id: distilled-backend
+  company: Distilled SCH
+  companyUrl: https://www.daft.ie/
+  role:
+    en: Senior Backend Engineer
+    fr: Ingénieur backend senior
+  start: 2018-02
+  end: 2018-11
+  location:
+    en: Dublin, Ireland (remote from South Korea)
+    fr: Dublin, Irlande (en télétravail depuis la Corée du Sud)
+  ref: dublin
+  highlights:
+    en:
+      - Built microservices with Java 8 and Spring Boot, deployed on OpenShift.
+      - Worked fully remote from South Korea with three overlapping hours a day, in a Scrum team.
+    fr:
+      - Développement de microservices en Java 8 et Spring Boot, déployés sur OpenShift.
+      - Télétravail complet depuis la Corée du Sud avec trois heures de chevauchement par jour, en équipe Scrum.
+  stack: [Java 8, Spring Boot, OpenShift]
+  filters: [java]
+
+- id: distilled-daft
+  company: Distilled SCH
+  companyUrl: https://www.daft.ie/
+  role:
+    en: PHP Developer on daft.ie
+    fr: Développeur PHP sur daft.ie
+  start: 2014-12
+  end: 2018-02
+  location:
+    en: Dublin, Ireland
+    fr: Dublin, Irlande
+  ref: dublin
+  highlights:
+    en:
+      - Developed and maintained daft.ie, Ireland's largest property website, through the upgrade from PHP 5.3 to 7.1.
+      - Led development on several medium-sized projects.
+      - Was the main contributor to the internal REST API, built with Slim and OpenAPI.
+      - Introduced best practices such as TDD, design patterns and SOLID.
+    fr:
+      - Développement et maintenance de daft.ie, premier site immobilier d'Irlande, pendant la migration de PHP 5.3 à 7.1.
+      - Lead developer sur plusieurs projets de taille moyenne.
+      - Principal contributeur de l'API REST interne, construite avec Slim et OpenAPI.
+      - 'Mise en place de bonnes pratiques : TDD, design patterns, SOLID.'
+  stack: [PHP 5.3–7.1, Slim, OpenAPI, MySQL, PHPUnit]
+  filters: [php]
+
+- id: directstreams
+  company: DirectStreams
+  role:
+    en: Full-stack Web Developer
+    fr: Développeur web full-stack
+  start: 2012-01
+  end: 2014-09
+  location:
+    en: Paris, France
+    fr: Paris, France
+  ref: paris
+  highlights:
+    en:
+      - Built an extranet with Ruby on Rails, jQuery and Bootstrap.
+      - Developed REST APIs.
+      - Was the main maintainer of the legacy PHP 5.3 platform.
+      - Worked in a Scrum team of four developers.
+    fr:
+      - Développement d'un extranet en Ruby on Rails, jQuery et Bootstrap.
+      - Développement d'API REST.
+      - Principal mainteneur de la plateforme historique en PHP 5.3.
+      - Méthode Scrum dans une équipe de quatre développeurs.
+  stack: [Ruby on Rails, PHP 5.3, jQuery, Bootstrap]
+  filters: [ruby, php, javascript]

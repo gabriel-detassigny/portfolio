@@ -29,10 +29,21 @@ const education = defineCollection({
 	loader: file('src/content/education.yml'),
 	schema: z.object({
 		school: z.string(),
+		url: z.url().optional(),
 		degree: localized,
 		start: z.number(),
 		end: z.number(),
 		location: z.string(),
+	}),
+});
+
+const certifications = defineCollection({
+	loader: file('src/content/certifications.yml'),
+	schema: z.object({
+		name: z.string(),
+		issuer: z.string(),
+		date: yearMonth,
+		url: z.url(),
 	}),
 });
 
@@ -72,4 +83,4 @@ const services = defineCollection({
 	}),
 });
 
-export const collections = { experience, education, projects, contributions, services };
+export const collections = { experience, education, certifications, projects, contributions, services };

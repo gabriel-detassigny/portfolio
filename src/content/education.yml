@@ -1,14 +1,16 @@
 - id: etna
   school: ETNA
+  url: https://etna.io/
   degree:
     en: Master's degree in Software Engineering
-    fr: Master en ingénierie logicielle
+    fr: "Architecte logiciel, développeur d'application"
   start: 2012
   end: 2014
   location: Ivry-sur-Seine, France
 
 - id: epitech
   school: Epitech
+  url: https://www.epitech.eu/
   degree:
     en: Bachelor's degree in Software Engineering
     fr: Bachelor en ingénierie logicielle

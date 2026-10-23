@@ -11,6 +11,7 @@ const { locale } = Astro.props;
 const t = useTranslations(locale);
 const roles = (await getCollection('experience')).sort((a, b) => b.data.start.localeCompare(a.data.start));
 const education = (await getCollection('education')).sort((a, b) => b.data.end - a.data.end);
+const certifications = (await getCollection('certifications')).sort((a, b) => b.data.date.localeCompare(a.data.date));
 ---
 
 <section class="section wrap" id="experience" aria-labelledby="experience-title">
@@ -63,6 +64,21 @@ const education = (await getCollection('education')).sort((a, b) => b.data.end -
 		))}
 	</ol>
 
+	<h3 class="sub">{t('experience.certifications')}</h3>
+	<ul class="education">
+		{certifications.map((cert) => (
+			<li>
+				<span class="years">{formatMonth(locale, cert.data.date)}</span>
+				<span>
+					<a href={cert.data.url}>
+						<strong>{cert.data.name}</strong>
+					</a>{' '}
+					· {cert.data.issuer}
+				</span>
+			</li>
+		))}
+	</ul>
+
 	<h3 class="sub">{t('experience.education')}</h3>
 	<ul class="education">
 		{education.map((entry) => (
@@ -71,7 +87,8 @@ const education = (await getCollection('education')).sort((a, b) => b.data.end -
 					{entry.data.start} – {entry.data.end}
 				</span>
 				<span>
-					<strong>{entry.data.degree[locale]}</strong> · {entry.data.school}, {entry.data.location}
+					<strong>{entry.data.degree[locale]}</strong> ·{' '}
+					{entry.data.url ? <a href={entry.data.url}>{entry.data.school}</a> : entry.data.school}, {entry.data.location}
 				</span>
 			</li>
 		))}

@@ -5,7 +5,7 @@ export const ui = {
 	en: {
 		'meta.title': 'Gabriel de Tassigny · Senior PHP & WordPress Engineer',
 		'meta.description':
-			'Senior Staff Engineer with {years} years of PHP, Symfony and WordPress experience. Available for freelance projects.',
+			'Staff Engineer with {years} years of PHP, Symfony and WordPress experience. Available for freelance projects.',
 		'nav.main': 'Main',
 		'nav.experience': 'Experience',
 		'nav.projects': 'Projects',
@@ -16,7 +16,7 @@ export const ui = {
 		'nav.otherLanguage': 'Français',
 		'nav.skip': 'Skip to content',
 		'theme.toggle': 'Toggle dark mode',
-		'hero.role': 'Senior Staff Engineer · PHP, Symfony & WordPress · since {start}',
+		'hero.role': 'Staff Engineer · PHP, Symfony & WordPress · since {start}',
 		'hero.pitch':
 			"I build and maintain web platforms for publishers and product teams, from REST APIs and headless WordPress to Gutenberg blocks and Core Web Vitals work. I'm based in Poitiers, France, and have worked remotely with teams in Dublin, London and beyond.",
 		'hero.available': 'Open to freelance projects',
@@ -37,6 +37,7 @@ export const ui = {
 		'experience.all': 'All',
 		'experience.present': 'now',
 		'experience.education': 'Education',
+		'experience.certifications': 'Certifications',
 		'filter.wordpress': 'WordPress',
 		'filter.php': 'PHP',
 		'filter.symfony': 'Symfony / API Platform',
@@ -88,7 +89,7 @@ export const ui = {
 	fr: {
 		'meta.title': 'Gabriel de Tassigny · Ingénieur PHP & WordPress senior',
 		'meta.description':
-			"Senior Staff Engineer avec {years} ans d'expérience en PHP, Symfony et WordPress. Disponible pour des missions freelance.",
+			"Staff Engineer avec {years} ans d'expérience en PHP, Symfony et WordPress. Disponible pour des missions freelance.",
 		'nav.main': 'Principal',
 		'nav.experience': 'Expérience',
 		'nav.projects': 'Projets',
@@ -99,7 +100,7 @@ export const ui = {
 		'nav.otherLanguage': 'English',
 		'nav.skip': 'Aller au contenu',
 		'theme.toggle': 'Activer ou désactiver le mode sombre',
-		'hero.role': 'Senior Staff Engineer · PHP, Symfony & WordPress · depuis {start}',
+		'hero.role': 'Staff Engineer · PHP, Symfony & WordPress · depuis {start}',
 		'hero.pitch':
 			"Je conçois et maintiens des plateformes web pour des éditeurs de presse et des équipes produit : API REST, WordPress headless, blocs Gutenberg et optimisation des Core Web Vitals. Basé à Poitiers, j'ai travaillé à distance avec des équipes à Dublin, Londres et ailleurs.",
 		'hero.available': 'Disponible pour des missions freelance',
@@ -120,6 +121,7 @@ export const ui = {
 		'experience.all': 'Tout',
 		'experience.present': "aujourd'hui",
 		'experience.education': 'Formation',
+		'experience.certifications': 'Certifications',
 		'filter.wordpress': 'WordPress',
 		'filter.php': 'PHP',
 		'filter.symfony': 'Symfony / API Platform',

@@ -13,16 +13,16 @@
   url: https://core.trac.wordpress.org/changeset/53498
   date: 2022-05
 
-- id: performance-170
+- id: theme-my-login-199
   kind: pull-request
-  project: WordPress/performance
+  project: Theme My Login
   title:
-    en: Performance budget calculator
-    fr: Calculateur de budget de performance
+    en: Fix the login link after an AJAX password reset
+    fr: Correction du lien de connexion après une réinitialisation de mot de passe en AJAX
   description:
-    en: Proposed a tool in the WordPress Performance Lab plugin that generates a budget.json file for Lighthouse.
-    fr: Proposition d'un outil pour le plugin Performance Lab de WordPress, qui génère un fichier budget.json pour Lighthouse.
-  url: https://github.com/WordPress/performance/pull/170
+    en: The confirmation message linked to a literal "%s" instead of the login page. Merged into Theme My Login, a popular WordPress plugin.
+    fr: Le message de confirmation pointait vers un « %s » littéral au lieu de la page de connexion. Fusionné dans Theme My Login, un plugin WordPress populaire.
+  url: https://github.com/theme-my-login/theme-my-login/pull/199
   date: 2022-02
 
 - id: simple-container

@@ -1,0 +1,13 @@
+# Professional certifications, most recent first (equal dates keep this order).
+
+- id: wordpress-advanced-developer
+  name: Advanced Professional WordPress Developer
+  issuer: Automattic
+  date: 2026-09
+  url: https://automattic.credential.net/cc09d98d-c26c-43b2-b2dc-13864622354b
+
+- id: claude-code
+  name: Effective Use of Claude Code
+  issuer: X-Team
+  date: 2026-09
+  url: https://credsverse.com/credentials/ff95a0ce-b2cd-4b5e-af27-7d89e77770dc

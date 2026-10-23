@@ -6,8 +6,8 @@
   company: XWP
   companyUrl: https://xwp.co/
   role:
-    en: Senior Staff Engineer & Product Owner
-    fr: Senior Staff Engineer & Product Owner
+    en: Staff Engineer & Product Owner
+    fr: Staff Engineer & Product Owner
   start: 2021-09
   end: null
   location:
@@ -110,6 +110,7 @@
 
 - id: directstreams
   company: DirectStreams
+  companyUrl: https://www.direct-streams.com/
   role:
     en: Full-stack Web Developer
     fr: Développeur web full-stack

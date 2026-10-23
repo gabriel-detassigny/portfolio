@@ -57,6 +57,8 @@ Each successful fetch updates `data-cache/*.json`. If a fetch fails, the build u
 
 `.github/workflows/deploy.yml` uses the same secrets as the blog: `SSH_HOST`, `SSH_USER`, `SSH_PRIVATE_KEY`, `SSH_KNOWN_HOSTS` and `DEPLOY_PATH`. If any of them is missing, the deploy step is skipped.
 
+On the OVH hosting, the site is deployed to `~/portfolio`. detassigny.net is the hosting's primary domain, and OVH doesn't allow changing its root folder, which is `~/personal-blog`. So `~/personal-blog` is a symlink to `portfolio`, and the blog itself is deployed to `~/blog`. Never point a deploy at `~/personal-blog`: rsync would follow the symlink and `--delete` would replace the portfolio.
+
 `deploy/.htaccess` is copied into the site. It:
 
 - forces HTTPS and removes `www`

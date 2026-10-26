@@ -16,17 +16,18 @@
   ref: HEAD -> remote
   highlights:
     en:
-      - Builds modern WordPress plugins and themes for large publishers (Evolve Media, Are Media) and tech companies (Twitch), with Gutenberg, React, PHP 8, Sass and TypeScript.
+      - Builds modern WordPress plugins and themes for large publishers and tech companies, with Gutenberg, React, PHP 8, Sass and TypeScript.
       - Improves web performance and Core Web Vitals on high-traffic sites.
       - Acts as product owner, writing user stories and managing and prioritizing the backlog.
       - Works with internal and client stakeholders across several projects at once, in Scrum and Kanban teams.
       - Uses AI-assisted development workflows day to day.
     fr:
-      - Développement de plugins et thèmes WordPress modernes pour de grands éditeurs (Evolve Media, Are Media) et des entreprises tech (Twitch), avec Gutenberg, React, PHP 8, Sass et TypeScript.
+      - Développement de plugins et thèmes WordPress modernes pour de grands éditeurs et des entreprises tech, avec Gutenberg, React, PHP 8, Sass et TypeScript.
       - Optimisation des performances web et des Core Web Vitals sur des sites à fort trafic.
       - 'Rôle de product owner : rédaction des user stories, gestion et priorisation du backlog.'
       - Communication avec les parties prenantes internes et clientes sur plusieurs projets en parallèle, en Scrum et Kanban.
       - Développement assisté par l'IA au quotidien.
+  clients: [Twitch, Are Media, Evolve Media, OFX, ButterflyMX, Good Friday Appeal]
   stack: [WordPress, Gutenberg, PHP 8, React, TypeScript, Sass]
   filters: [wordpress, php, javascript]
 
@@ -44,14 +45,14 @@
   ref: london
   highlights:
     en:
-      - Migrated sites to headless WordPress and a service-oriented architecture.
+      - Migrated BBC Good Food (bbcgoodfood.com) to headless WordPress and a service-oriented architecture.
       - Built REST APIs with PHP 7.4, API Platform (Symfony), MongoDB and Docker.
       - Developed AWS Lambda functions with Bref for Amazon Alexa.
       - Set up automated testing at every level, from unit and API tests to load and end-to-end tests.
       - Contributed to the JavaScript side with Node.js and React.
       - Mentored and coached mid-level developers.
     fr:
-      - Migration de sites vers WordPress headless et une architecture orientée services.
+      - Migration de BBC Good Food (bbcgoodfood.com) vers WordPress headless et une architecture orientée services.
       - Développement d'API REST avec PHP 7.4, API Platform (Symfony), MongoDB et Docker.
       - Développement de fonctions AWS Lambda avec Bref pour Amazon Alexa.
       - 'Tests automatisés à tous les niveaux : unitaires, API, charge et end-to-end.'

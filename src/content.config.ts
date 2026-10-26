@@ -20,6 +20,8 @@ const experience = defineCollection({
 		location: localized,
 		ref: z.string(),
 		highlights: localizedList,
+		// Agency clients, shown under the highlights.
+		clients: z.array(z.string()).optional(),
 		stack: z.array(z.string()),
 		filters: z.array(z.enum(FILTERS)),
 	}),

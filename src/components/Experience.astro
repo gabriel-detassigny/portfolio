@@ -55,6 +55,11 @@ const certifications = (await getCollection('certifications')).sort((a, b) => b.
 						<li>{highlight}</li>
 					))}
 				</ul>
+				{role.data.clients && (
+					<p class="clients">
+						<span>{t('experience.clients')}</span> {role.data.clients.join(', ')}
+					</p>
+				)}
 				<ul class="tags">
 					{role.data.stack.map((tech) => (
 						<li class="tag">{tech}</li>
@@ -207,6 +212,14 @@ const certifications = (await getCollection('certifications')).sort((a, b) => b.
 		color: var(--muted);
 		font-size: 0.95rem;
 		max-width: 46rem;
+	}
+	.clients {
+		margin: -0.25rem 0 0.75rem;
+		font-size: 0.95rem;
+	}
+	.clients span {
+		font: 400 0.82rem var(--font-mono);
+		color: var(--muted);
 	}
 	.sub {
 		font: 700 1.1rem var(--font-display);

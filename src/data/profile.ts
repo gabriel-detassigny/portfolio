@@ -27,9 +27,12 @@ export const skills = [
 	},
 	{
 		group: { en: 'WordPress', fr: 'WordPress' },
-		items: ['Plugins', 'Block themes', 'Gutenberg blocks', 'Headless', 'WP-CLI', 'Core Web Vitals'],
+		items: ['Plugins', 'Block themes', 'Gutenberg blocks', 'Headless', 'WP-CLI'],
 	},
-	{ group: { en: 'Frontend', fr: 'Frontend' }, items: ['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS / Sass'] },
+	{
+		group: { en: 'Frontend', fr: 'Frontend' },
+		items: ['React', 'TypeScript', 'JavaScript', 'HTML', 'CSS / Sass', 'Core Web Vitals'],
+	},
 	{ group: { en: 'Data', fr: 'Données' }, items: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQLite'] },
 	{
 		group: { en: 'Testing', fr: 'Tests' },

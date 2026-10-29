@@ -78,7 +78,7 @@ export const ui = {
 		'cv.title': 'CV',
 		'cv.profile': 'Profile',
 		'cv.profileText':
-			'Staff engineer who has built WordPress platforms for Twitch and BBC Good Food. Backend-first, with product-owner experience setting priorities for client teams.',
+			'Staff engineer who has built WordPress platforms for Twitch and BBC Good Food. Full-stack with backend depth, and product-owner experience setting priorities for client teams.',
 		'cv.experience': 'Experience',
 		'cv.skills': 'Skills',
 		'cv.interests': 'Interests',
@@ -163,7 +163,7 @@ export const ui = {
 		'cv.title': 'CV',
 		'cv.profile': 'Profil',
 		'cv.profileText':
-			'Staff Engineer qui a conçu des plateformes WordPress pour Twitch et BBC Good Food. Profil avant tout backend, avec une expérience de product owner pour fixer les priorités des équipes sur des projets clients.',
+			'Staff Engineer qui a conçu des plateformes WordPress pour Twitch et BBC Good Food. Profil full-stack avec une solide expertise backend, et une expérience de product owner pour fixer les priorités des équipes sur des projets clients.',
 		'cv.experience': 'Expérience',
 		'cv.skills': 'Compétences',
 		'cv.interests': "Centres d'intérêt",

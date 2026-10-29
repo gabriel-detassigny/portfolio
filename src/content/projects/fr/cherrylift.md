@@ -5,7 +5,7 @@ summary: Transfère des contenus choisis d'un site WordPress à un autre, par ex
 repo: gabriel-detassigny/cherrylift
 url: https://wordpress.org/plugins/cherrylift/
 tags: [PHP, WordPress, React, WP-CLI, Playwright]
-order: 1
+order: 3
 featured: true
 ---
 

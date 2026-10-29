@@ -23,7 +23,7 @@ export const profile = {
 export const skills = [
 	{
 		group: { en: 'Backend', fr: 'Backend' },
-		items: ['PHP 5.3 → 8.5', 'Symfony', 'API Platform', 'Slim', 'Java', 'Ruby', 'Node.js'],
+		items: ['PHP 8.x (and legacy upgrades from 5.3)', 'Symfony', 'API Platform', 'Slim', 'Node.js'],
 	},
 	{
 		group: { en: 'WordPress', fr: 'WordPress' },
@@ -36,10 +36,11 @@ export const skills = [
 	{ group: { en: 'Data', fr: 'Données' }, items: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQLite'] },
 	{
 		group: { en: 'Testing', fr: 'Tests' },
-		items: ['TDD', 'PHPUnit', 'Playwright', 'API tests', 'Load tests (Artillery)'],
+		items: ['TDD', 'PHPUnit', 'Playwright', 'API tests', 'Load tests (Artillery)', 'Profiling (Blackfire)'],
 	},
 	{
 		group: { en: 'DevOps', fr: 'DevOps' },
-		items: ['GitHub Actions', 'Docker', 'AWS', 'Kubernetes', 'Terraform', 'Linux'],
+		items: ['GitHub Actions', 'Docker', 'AWS', 'Kubernetes', 'Linux'],
 	},
+	{ group: { en: 'Previously', fr: 'Auparavant' }, items: ['Java', 'Spring Boot', 'Ruby on Rails'] },
 ] as const;

@@ -4,7 +4,7 @@ kind: Symfony CLI
 summary: A command-line tool that predicts when pay-as-you-go gas or electricity credit will run out.
 repo: gabriel-detassigny/payg-utility-calculator
 tags: [PHP, Symfony Console, Doctrine, SQLite]
-order: 4
+order: 6
 featured: true
 ---
 

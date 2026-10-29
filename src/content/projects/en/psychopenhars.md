@@ -5,7 +5,7 @@ summary: Moved a WordPress 5.8 site built with a page builder to WordPress 7.1 a
 repo: gabriel-detassigny/psychopenhars
 url: https://psychopenhars.com
 tags: [WordPress, Block theme, WP-CLI, Apache, Bash]
-order: 3
+order: 5
 featured: true
 ---
 

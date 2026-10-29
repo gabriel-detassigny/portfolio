@@ -5,7 +5,7 @@ summary: Un thème WordPress sur mesure, compatible avec l'éditeur de blocs, po
 repo: gabriel-detassigny/eutopia-theme
 url: https://www.eutopia-restaurant.fr
 tags: [PHP, WordPress, theme.json, Sass, wp-env]
-order: 2
+order: 4
 featured: true
 ---
 

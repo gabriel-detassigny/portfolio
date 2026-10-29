@@ -5,7 +5,7 @@ summary: A custom WordPress theme with block editor support for the Eutopia rest
 repo: gabriel-detassigny/eutopia-theme
 url: https://www.eutopia-restaurant.fr
 tags: [PHP, WordPress, theme.json, Sass, wp-env]
-order: 2
+order: 4
 featured: true
 ---
 

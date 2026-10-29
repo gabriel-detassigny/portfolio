@@ -17,16 +17,16 @@
   highlights:
     en:
       - Builds modern WordPress plugins and themes for large publishers and tech companies, with Gutenberg, React, PHP 8, Sass and TypeScript.
+      - 'Product owner for the migration of 12 Are Media sites to a WordPress multisite: planned a year-long launch calendar for a team of five developers, a project manager, a QA engineer and a designer, with accessibility and Core Web Vitals kept in the green.'
       - Improves web performance and Core Web Vitals on high-traffic sites.
-      - Acts as product owner, writing user stories and managing and prioritizing the backlog.
-      - Works with internal and client stakeholders across several projects at once, in Scrum and Kanban teams.
-      - Uses AI-assisted development workflows day to day.
+      - 'Helped define the maintenance checklist for client sites, and built an AI agent skill for the team that automates most of it: WordPress core and plugin updates, security checks and Lighthouse performance reviews.'
+      - Writes user stories and manages and prioritizes the backlog, with internal and client stakeholders across several projects at once, in Scrum and Kanban teams.
     fr:
       - Développement de plugins et thèmes WordPress modernes pour de grands éditeurs et des entreprises tech, avec Gutenberg, React, PHP 8, Sass et TypeScript.
+      - "Product owner de la migration de 12 sites d'Are Media vers un WordPress multisite : planification d'un calendrier de lancements sur un an pour une équipe de cinq développeurs, un chef de projet, un QA et un designer, avec l'accessibilité et les Core Web Vitals maintenus au vert."
       - Optimisation des performances web et des Core Web Vitals sur des sites à fort trafic.
-      - 'Rôle de product owner : rédaction des user stories, gestion et priorisation du backlog.'
-      - Communication avec les parties prenantes internes et clientes sur plusieurs projets en parallèle, en Scrum et Kanban.
-      - Développement assisté par l'IA au quotidien.
+      - "Participation à la définition de la checklist de maintenance des sites clients, et création pour l'équipe d'une skill d'agent IA qui en automatise l'essentiel : mises à jour du cœur WordPress et des plugins, contrôles de sécurité et audits de performance Lighthouse."
+      - Rédaction des user stories, gestion et priorisation du backlog, avec les parties prenantes internes et clientes sur plusieurs projets en parallèle, en Scrum et Kanban.
   clients: [Twitch, Are Media, Evolve Media, OFX, ButterflyMX, Good Friday Appeal]
   stack: [WordPress, Gutenberg, PHP 8, React, TypeScript, Sass]
   filters: [wordpress, php, javascript]
@@ -45,20 +45,22 @@
   ref: london
   highlights:
     en:
-      - Migrated BBC Good Food (bbcgoodfood.com) to headless WordPress and a service-oriented architecture.
-      - Built REST APIs with PHP 7.4, API Platform (Symfony), MongoDB and Docker.
+      - Co-led the backend design of a new headless architecture for Immediate Media's WordPress multisite (about 100 million monthly users across its sites), launched first on the newly acquired BBC Good Food (about 50 million monthly unique users).
+      - "Defined the API contracts for the frontend team and built three REST services with API Platform (Symfony), PHP 7.4, MongoDB and Docker: content such as recipes, per-site settings, and users' saved recipes."
+      - Built the WordPress side that pushes content to these services automatically whenever a post is published, edited or deleted.
+      - Load-tested the services with Artillery and profiled them with Blackfire to handle that traffic, on tight stakeholder deadlines.
+      - Set up automated testing at every level, from unit and API tests to end-to-end tests.
       - Developed AWS Lambda functions with Bref for Amazon Alexa.
-      - Set up automated testing at every level, from unit and API tests to load and end-to-end tests.
-      - Contributed to the JavaScript side with Node.js and React.
       - Mentored and coached mid-level developers.
     fr:
-      - Migration de BBC Good Food (bbcgoodfood.com) vers WordPress headless et une architecture orientée services.
-      - Développement d'API REST avec PHP 7.4, API Platform (Symfony), MongoDB et Docker.
+      - Co-pilotage de la conception backend d'une nouvelle architecture headless pour le WordPress multisite d'Immediate Media (environ 100 millions d'utilisateurs mensuels sur l'ensemble des sites), lancée d'abord sur BBC Good Food, récemment racheté (environ 50 millions de visiteurs uniques par mois).
+      - "Définition des contrats d'API pour l'équipe frontend et développement de trois services REST avec API Platform (Symfony), PHP 7.4, MongoDB et Docker : contenus (dont les recettes), réglages par site et recettes enregistrées des utilisateurs."
+      - Développement côté WordPress de l'envoi automatique des contenus vers ces services à chaque publication, modification ou suppression.
+      - Tests de charge avec Artillery et profilage avec Blackfire pour tenir ce trafic, avec des délais serrés imposés par les parties prenantes.
+      - 'Tests automatisés à tous les niveaux : unitaires, API et end-to-end.'
       - Développement de fonctions AWS Lambda avec Bref pour Amazon Alexa.
-      - 'Tests automatisés à tous les niveaux : unitaires, API, charge et end-to-end.'
-      - Contributions côté JavaScript avec Node.js et React.
       - Mentorat de développeurs de niveau intermédiaire.
-  stack: [PHP 7.4, API Platform, Symfony, MongoDB, Docker, AWS Lambda, Node.js, React]
+  stack: [PHP 7.4, API Platform, Symfony, MongoDB, WordPress, Docker, AWS Lambda, Artillery, Blackfire, Node.js, React]
   filters: [php, symfony, wordpress, javascript]
 
 - id: distilled-backend
@@ -75,12 +77,12 @@
   ref: dublin
   highlights:
     en:
-      - Built microservices with Java 8 and Spring Boot, deployed on OpenShift.
+      - Built microservices with Java 8 and Spring Boot, deployed on Kubernetes.
       - Worked fully remote from South Korea with three overlapping hours a day, in a Scrum team.
     fr:
-      - Développement de microservices en Java 8 et Spring Boot, déployés sur OpenShift.
+      - Développement de microservices en Java 8 et Spring Boot, déployés sur Kubernetes.
       - Télétravail complet depuis la Corée du Sud avec trois heures de chevauchement par jour, en équipe Scrum.
-  stack: [Java 8, Spring Boot, OpenShift]
+  stack: [Java 8, Spring Boot, Kubernetes]
   filters: [java]
 
 - id: distilled-daft

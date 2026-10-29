@@ -5,7 +5,7 @@ summary: Migration d'un site WordPress 5.8 construit avec un page builder vers W
 repo: gabriel-detassigny/psychopenhars
 url: https://psychopenhars.com
 tags: [WordPress, Thème de blocs, WP-CLI, Apache, Bash]
-order: 3
+order: 5
 featured: true
 ---
 

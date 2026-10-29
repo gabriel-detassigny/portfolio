@@ -4,7 +4,7 @@ kind: CLI Symfony
 summary: Un outil en ligne de commande qui prédit quand le crédit d'un compteur de gaz ou d'électricité prépayé sera épuisé.
 repo: gabriel-detassigny/payg-utility-calculator
 tags: [PHP, Symfony Console, Doctrine, SQLite]
-order: 4
+order: 6
 featured: true
 ---
 

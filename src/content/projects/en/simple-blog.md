@@ -4,7 +4,7 @@ kind: Frameworkless PHP
 summary: The blog engine that ran my blog for years, built from Composer packages without a framework.
 repo: gabriel-detassigny/simple-blog
 tags: [PHP, FastRoute, Twig, Doctrine, Phinx, PHPUnit]
-order: 5
+order: 7
 featured: true
 ---
 

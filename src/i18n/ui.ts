@@ -78,7 +78,7 @@ export const ui = {
 		'cv.title': 'CV',
 		'cv.profile': 'Profile',
 		'cv.profileText':
-			'Web developer since 2012 with deep backend skills and solid frontend knowledge. PHP expert across modern and legacy codebases, frameworks and CMSs. User-focused problem solver who grew into a product owner. Comfortable working both autonomously and in teams, with strong written and verbal communication in remote environments.',
+			'Staff engineer who has built WordPress platforms for Twitch and BBC Good Food. Backend-first, with product-owner experience setting priorities for client teams.',
 		'cv.experience': 'Experience',
 		'cv.skills': 'Skills',
 		'cv.interests': 'Interests',
@@ -163,7 +163,7 @@ export const ui = {
 		'cv.title': 'CV',
 		'cv.profile': 'Profil',
 		'cv.profileText':
-			'Développeur web depuis 2012, avec une solide expertise backend et de bonnes connaissances frontend. Expert PHP sur des bases de code modernes comme historiques, avec ou sans framework ou CMS. Orienté utilisateur, je suis devenu product owner. À l’aise en autonomie comme en équipe, avec une communication écrite et orale efficace en télétravail.',
+			'Staff Engineer qui a conçu des plateformes WordPress pour Twitch et BBC Good Food. Profil avant tout backend, avec une expérience de product owner pour fixer les priorités des équipes sur des projets clients.',
 		'cv.experience': 'Expérience',
 		'cv.skills': 'Compétences',
 		'cv.interests': "Centres d'intérêt",

@@ -5,7 +5,7 @@ summary: Pushes selected content between WordPress sites, such as staging to pro
 repo: gabriel-detassigny/cherrylift
 url: https://wordpress.org/plugins/cherrylift/
 tags: [PHP, WordPress, React, WP-CLI, Playwright]
-order: 1
+order: 3
 featured: true
 ---
 

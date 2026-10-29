@@ -4,7 +4,7 @@ kind: PHP sans framework
 summary: Le moteur de blog qui a fait tourner mon blog pendant des années, construit avec des packages Composer, sans framework.
 repo: gabriel-detassigny/simple-blog
 tags: [PHP, FastRoute, Twig, Doctrine, Phinx, PHPUnit]
-order: 5
+order: 7
 featured: true
 ---
 

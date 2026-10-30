@@ -10,8 +10,6 @@ export const profile = {
 		wordpress: 'https://profiles.wordpress.org/gdetassigny/',
 		blog: 'https://blog.detassigny.net/',
 	},
-	// Shown in the hero. Set to false to hide the "open to freelance projects" badge.
-	availableForFreelance: true,
 	cities: ['Paris', 'Dublin', 'Incheon', 'London', 'Seoul', 'Jeonju', 'Poitiers'],
 	languages: [
 		{ en: 'French (native)', fr: 'Français (langue maternelle)' },

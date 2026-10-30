@@ -29,15 +29,15 @@ npm run dev                        # http://localhost:4321
 
 Text that appears in both languages has an `en` and an `fr` version side by side.
 
-| What                                                | Where                                                                                 |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| Jobs                                                | `src/content/experience.yml`                                                          |
-| Education                                           | `src/content/education.yml`                                                           |
-| Projects and case studies                           | `src/content/projects/{en,fr}/<slug>.md`. Each one gets a page at `/projects/<slug>/` |
-| Open source contributions                           | `src/content/contributions.yml`                                                       |
-| Freelance services                                  | `src/content/services.yml`                                                            |
-| Name, email, profile links, skills, freelance badge | `src/data/profile.ts`                                                                 |
-| Interface text                                      | `src/i18n/ui.ts`                                                                      |
+| What                               | Where                                                                                 |
+| ---------------------------------- | ------------------------------------------------------------------------------------- |
+| Jobs                               | `src/content/experience.yml`                                                          |
+| Education                          | `src/content/education.yml`                                                           |
+| Projects and case studies          | `src/content/projects/{en,fr}/<slug>.md`. Each one gets a page at `/projects/<slug>/` |
+| Open source contributions          | `src/content/contributions.yml`                                                       |
+| Freelance services                 | `src/content/services.yml`                                                            |
+| Name, email, profile links, skills | `src/data/profile.ts`                                                                 |
+| Interface text                     | `src/i18n/ui.ts`                                                                      |
 
 Schemas are in `src/content.config.ts`, so a typo in a field name fails the build.
 

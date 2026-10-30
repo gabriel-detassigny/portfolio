@@ -11,7 +11,6 @@ const { locale } = Astro.props;
 const t = useTranslations(locale);
 const years = yearsOfExperience(profile.careerStart);
 const home = localizePath(locale);
-const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(t('contact.subject'))}`;
 ---
 
 <section class="wrap hero" aria-labelledby="hero-title">
@@ -22,7 +21,6 @@ const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(t('contact.
 		<h1 id="hero-title">{profile.name}</h1>
 		<p class="role">{t('hero.role', { start: profile.careerStart })}</p>
 		<p class="pitch">{t('hero.pitch')}</p>
-		{profile.availableForFreelance && <p class="status">{t('hero.available')}</p>}
 	</div>
 
 	<div class="paths">
@@ -44,9 +42,6 @@ const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(t('contact.
 			<h2>{t('hero.clients.title')}</h2>
 			<p>{t('hero.clients.text')}</p>
 			<div class="btns">
-				<a class="btn btn-primary" href={mailto}>
-					{t('hero.clients.cta')}
-				</a>
 				<a class="btn btn-ghost" href={`${home}#services`}>
 					{t('hero.clients.secondary')}
 				</a>
@@ -89,24 +84,6 @@ const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(t('contact.
 	.pitch {
 		max-width: 38rem;
 		margin: 1.25rem 0 0;
-	}
-	.status {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		font: 500 0.8rem var(--font-mono);
-		color: var(--signal);
-		background: var(--signal-soft);
-		padding: 0.3rem 0.7rem;
-		border-radius: 999px;
-		margin: 1.5rem 0 0;
-	}
-	.status::before {
-		content: '';
-		width: 0.5rem;
-		height: 0.5rem;
-		border-radius: 50%;
-		background: var(--signal);
 	}
 	.paths {
 		display: grid;

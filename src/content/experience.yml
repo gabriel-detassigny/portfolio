@@ -17,13 +17,15 @@
   highlights:
     en:
       - Builds modern WordPress plugins and themes for large publishers and tech companies, with Gutenberg, React, PHP 8, Sass and TypeScript.
-      - 'Product owner for the migration of 12 Are Media sites to a WordPress multisite: planned a year-long launch calendar for a team of five developers, a project manager, a QA engineer and a designer, with accessibility and Core Web Vitals kept in the green.'
+      - 'Product owner for 14 of the 16 Are Media sites moved from Umbraco to a WordPress multisite (6.2 million monthly users across the programme): planned a year-long launch calendar for a team of five developers, a project manager, a QA engineer and a designer, with accessibility and Core Web Vitals kept in the green. Editors now publish in half the time.'
+      - Product owner for a GPT-4 integration that turned unstructured restaurant reviews into structured data (JSON-LD) for search, for pennies per review.
       - Improves web performance and Core Web Vitals on high-traffic sites.
       - 'Helped define the maintenance checklist for client sites, and built an AI agent skill for the team that automates most of it: WordPress core and plugin updates, security checks and Lighthouse performance reviews.'
       - Writes user stories and manages and prioritizes the backlog, with internal and client stakeholders across several projects at once, in Scrum and Kanban teams.
     fr:
       - Développement de plugins et thèmes WordPress modernes pour de grands éditeurs et des entreprises tech, avec Gutenberg, React, PHP 8, Sass et TypeScript.
-      - "Product owner de la migration de 12 sites d'Are Media vers un WordPress multisite : planification d'un calendrier de lancements sur un an pour une équipe de cinq développeurs, un chef de projet, un QA et un designer, avec l'accessibilité et les Core Web Vitals maintenus au vert."
+      - "Product owner pour 14 des 16 sites d'Are Media migrés d'Umbraco vers un WordPress multisite (6,2 millions d'utilisateurs mensuels sur l'ensemble du programme) : planification d'un calendrier de lancements sur un an pour une équipe de cinq développeurs, un chef de projet, un QA et un designer, avec l'accessibilité et les Core Web Vitals maintenus au vert. Les rédactions publient désormais deux fois plus vite."
+      - Product owner d'une intégration GPT-4 qui a converti des critiques de restaurants non structurées en données structurées (JSON-LD) pour les moteurs de recherche, pour quelques centimes par critique.
       - Optimisation des performances web et des Core Web Vitals sur des sites à fort trafic.
       - "Participation à la définition de la checklist de maintenance des sites clients, et création pour l'équipe d'une skill d'agent IA qui en automatise l'essentiel : mises à jour du cœur WordPress et des plugins, contrôles de sécurité et audits de performance Lighthouse."
       - Rédaction des user stories, gestion et priorisation du backlog, avec les parties prenantes internes et clientes sur plusieurs projets en parallèle, en Scrum et Kanban.

@@ -1,5 +1,5 @@
 ---
-import { profile } from '../data/profile';
+import Email from './Email.astro';
 import { useTranslations, type Locale } from '../i18n/ui';
 import { cvPath } from '../lib/cv';
 
@@ -21,12 +21,10 @@ const otherLocale: Locale = locale === 'en' ? 'fr' : 'en';
 	</h2>
 	<p class="text">{t('contact.text')}</p>
 	<p class="email">
-		<a href={`mailto:${profile.email}`}>{profile.email}</a>
+		<Email />
 	</p>
 	<div class="btns">
-		<a class="btn btn-primary" href={`mailto:${profile.email}`}>
-			{t('contact.email')}
-		</a>
+		<Email class="btn btn-primary" label={t('contact.email')} />
 		<a class="btn btn-ghost" href={cvPath(locale)}>
 			{t('contact.cv')}
 		</a>
@@ -47,7 +45,7 @@ const otherLocale: Locale = locale === 'en' ? 'fr' : 'en';
 		margin: 1rem 0 1.5rem;
 		overflow-wrap: anywhere;
 	}
-	.email a {
+	.email :global(a) {
 		color: var(--ink);
 		text-decoration-color: var(--accent);
 	}

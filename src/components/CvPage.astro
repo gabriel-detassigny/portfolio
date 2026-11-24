@@ -1,4 +1,5 @@
 ---
+import Email from './Email.astro';
 import '@fontsource-variable/bricolage-grotesque';
 import '@fontsource/ibm-plex-sans/400.css';
 import '@fontsource/ibm-plex-sans/600.css';
@@ -36,7 +37,9 @@ const home = new URL(locale === 'en' ? '/' : `/${locale}/`, Astro.site).toString
 				<p class="role">Staff Engineer · PHP, Symfony & WordPress</p>
 			</div>
 			<ul class="contact">
-				<li>{profile.email}</li>
+				<li>
+					<Email />
+				</li>
 				<li>{profile.location[locale]}</li>
 				<li>
 					<a href={home}>{host(home)}</a>

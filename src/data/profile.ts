@@ -1,6 +1,6 @@
 export const profile = {
 	name: 'Gabriel de Tassigny',
-	email: 'contact@detassigny.net',
+	email: 'hello@detassigny.net',
 	location: { en: 'Poitiers, France', fr: 'Poitiers, France' },
 	careerStart: 2012,
 	repo: 'https://github.com/gabriel-detassigny/portfolio',

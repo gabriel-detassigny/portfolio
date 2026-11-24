@@ -80,3 +80,17 @@ test('the CV does not include private contact details', async ({ page }) => {
 		expect(text).not.toMatch(/\+33|1991/);
 	}
 });
+
+test('the email address is kept out of the HTML but works in the browser', async ({ page, request }) => {
+	for (const path of ['/', '/fr/', '/cv/']) {
+		const html = await (await request.get(path)).text();
+		expect(html, path).not.toMatch(/\w@detassigny\.net/);
+	}
+	await page.goto('/');
+	const contact = page.locator('#contact');
+	await expect(contact.getByRole('link', { name: 'hello@detassigny.net' })).toHaveAttribute(
+		'href',
+		'mailto:hello@detassigny.net',
+	);
+	await expect(contact.getByRole('link', { name: 'Email me' })).toHaveAttribute('href', 'mailto:hello@detassigny.net');
+});

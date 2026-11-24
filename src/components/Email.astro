@@ -1,0 +1,29 @@
+---
+// A mailto link that keeps the address out of the built HTML, so scrapers
+// that read the raw page don't find it. The address is stored base64-encoded
+// and the link is filled in by the script below once the page loads.
+// Without JavaScript, the text shows the address as "name [at] domain".
+import { profile } from '../data/profile';
+
+interface Props {
+	/** Link text. Defaults to the address itself. */
+	label?: string;
+	class?: string;
+}
+
+const { label, class: className } = Astro.props;
+const encoded = Buffer.from(profile.email).toString('base64');
+const fallback = profile.email.replace('@', ' [at] ');
+---
+
+<a class={className} data-email={encoded} data-email-text={label ? undefined : ''}>
+	{label ?? fallback}
+</a>
+
+<script>
+	for (const link of document.querySelectorAll<HTMLAnchorElement>('a[data-email]')) {
+		const email = atob(link.dataset.email!);
+		link.href = `mailto:${email}`;
+		if (link.dataset.emailText !== undefined) link.textContent = email;
+	}
+</script>
